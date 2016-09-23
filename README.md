@@ -20,7 +20,6 @@ Once GeoIP is installed you need to register the service provider with the appli
 
 ```php
 $app->register(ReLiCRSA\GeoIP\GeoIPServiceProvider::class);
-class_alias(ReLiCRSA\GeoIP\GeoIPFacade::class, "GeoIP");
 $app->configure('geoip');
 ```
 
@@ -77,6 +76,8 @@ $ php artisan geoip:update
 Get the location data for a website visitor:
 
 ```php
+use ReLiCRSA\GeoIP\GeoIPFacade;
+
 $location = GeoIP::getLocation();
 ```
 
@@ -85,6 +86,8 @@ $location = GeoIP::getLocation();
 Getting the location data for a given IP:
 
 ```php
+use ReLiCRSA\GeoIP\GeoIPFacade;
+
 $location = GeoIP::getLocation('232.223.11.11');
 ```
 
