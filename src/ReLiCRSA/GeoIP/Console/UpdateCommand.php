@@ -21,7 +21,7 @@ class UpdateCommand extends Command
 	protected $description = 'Update geoip database files to the latest version';
 
 	/**
-	 * @var \Torann\GeoIP\GeoIPUpdater
+	 * @var \ReLiCRSA\GeoIP\GeoIPUpdater
 	 */
 	protected $geoIPUpdater;
 
