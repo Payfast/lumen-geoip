@@ -1,6 +1,6 @@
 # GeoIP for Lumen
 
-Determine the geographical location of website visitors based on their IP addresses. [Homepage](http://lyften.com/projects/laravel-geoip/)
+Determine the geographical location of website visitors based on their IP addresses.
 
 ----------
 
