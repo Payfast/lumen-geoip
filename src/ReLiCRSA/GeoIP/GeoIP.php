@@ -192,7 +192,7 @@ class GeoIP {
                 "default" => false,
             );
         }
-        catch (AddressNotFoundException $e)
+        catch (Exception $e)
         {
             $location = $this->default_location;
         }
