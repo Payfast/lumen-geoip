@@ -172,11 +172,27 @@ class GeoIP {
     private function locate_legacy($ip)
     {
         include 'LegacySupport/geoip.inc';
-
-        die('We Are Here');
         $settings = $this->config->get('geoip.maxmind');
         $this->_gi = geoip_open($settings['database_path'], GEOIP_STANDARD);
+        $countryCode = geoip_country_code_by_addr( $this->_gi, $ip );
+        dd($countryCode);
 
+        /*
+        $location = array(
+            "ip"			=> $ip,
+            "isoCode" 		=> $record->country->isoCode,
+            "country" 		=> $record->country->name,
+            "city" 			=> $record->city->name,
+            "state" 		=> $record->mostSpecificSubdivision->isoCode,
+            "postal_code"   => $record->postal->code,
+            "lat" 			=> $record->location->latitude,
+            "lon" 			=> $record->location->longitude,
+            "timezone" 		=> $record->location->timeZone,
+            "continent"		=> $record->continent->code,
+            "default"       => false,
+        );
+        */
+        geoip_close($this->_gi);
     }
 
 	/**
