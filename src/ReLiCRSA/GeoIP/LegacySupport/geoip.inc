@@ -70,7 +70,7 @@ define("GEOIP_DOMAIN_EDITION_V6",24);
 
 define("CITYCOMBINED_FIXED_RECORD", 7 );
 
-class GeoIP {
+class GeoIP_MR {
     var $flags;
     var $filehandle;
     var $memory_buffer;
@@ -378,7 +378,7 @@ function _setup_segments($gi){
 }
 
 function geoip_open($filename, $flags) {
-  $gi = new GeoIP;
+  $gi = new GeoIP_MR;
   $gi->flags = $flags;
   if ($gi->flags & GEOIP_SHARED_MEMORY) {
     $gi->shmid = @shmop_open (GEOIP_SHM_KEY, "a", 0, 0);
