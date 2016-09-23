@@ -30,6 +30,40 @@ Browse to `vendors/relicrsa/lumen-geoip/src/config`
 
 Copy `geoip.php` to your `config` directory
 
+There are two supported lookup methods.
+
+The following are the available options
+
+~~~
+maxmind = GeoIP2 Either with Webservices or the Downloaded file
+legacy = GeoIP Standard Country database
+~~~
+
+The GeoIP Standard Country database can be downloaded here
+http://dev.maxmind.com/geoip/geolite
+
+The file needs to go to the storage/app directory once downloaded
+
+### Legacy Note
+
+The only data returned on the legacy lookup would be the ISO Code
+
+```php
+array (
+    "ip"           => "196.2.33.103",
+    "isoCode"      => "ZA",
+    "country"      => "",
+    "city"         => "",
+    "state"        => "",
+    "postal_code"  => "",
+    "lat"          => "",
+    "lon"          => "",
+    "timezone"     => "",
+    "continent"    => "",
+    "default"      => false
+);
+```
+
 ### Update max mind cities database
 
 ~~~
