@@ -7,8 +7,10 @@ return array(
 	| Service
 	|--------------------------------------------------------------------------
 	|
-	| Current only supports 'maxmind'.
-	|
+    | Current supported is
+    | 'maxmind' = Use GeoIP2 (Via DB and Webservice)
+    | 'legacy'  = Use Older Max Romonofsky GeoIP (Returns only ISOCODE)
+    |
 	*/
 
 	'service' => 'maxmind',
@@ -53,16 +55,17 @@ return array(
 	*/
 
 	'default_location' => array (
-		"ip"           => "127.0.0.0",
+        "ip"           => "127.0.0.1",
 		"isoCode"      => "ZA",
 		"country"      => "South Africa",
-		"city"         => "Muizenberg",
-		"state"        => "WP",
-		"postal_code"  => "7198",
-		"lat"          => 41.31,
-		"lon"          => -72.92,
+		"city"         => "Johannesburg",
+		"state"        => "GP",
+		"postal_code"  => "2195",
+		"lat"          => -29.0,
+		"lon"          => 24.0,
 		"timezone"     => "Africa/Johannesburg",
-		"continent"    => "NA",
+		"continent"    => "AF",
+        "default"      => true
 	),
 
 );

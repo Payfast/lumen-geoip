@@ -63,14 +63,14 @@ class GeoIP {
 	 * @var array
 	 */
 	protected $default_location = array (
-		"ip" 			=> "127.0.0.0",
+		"ip" 			=> "127.0.0.1",
 		"isoCode" 		=> "ZA",
 		"country" 		=> "Aouth Africa",
 		"city" 			=> "Johannesburg",
 		"state" 		=> "GP",
 		"postal_code"   => "2195",
-		"lat" 			=> 41.31,
-		"lon" 			=> -72.92,
+		"lat" 			=> -29.0,
+		"lon" 			=> 24.0,
 		"timezone" 		=> "Africa/Johannesburg",
 		"continent"		=> "AF",
 		"default"       => true,
