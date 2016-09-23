@@ -1,5 +1,5 @@
 {
-    "name": "relicrsa/geoip",
+    "name": "relicrsa/lumen-geoip",
     "description": "Supports the two main GeoIP services (infoDB and Maxmind).",
     "keywords": ["lumen", "lumen 5", "geoip", "location", "geolocation"],
     "license": "BSD 2-Clause",
