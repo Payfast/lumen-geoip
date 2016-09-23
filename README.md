@@ -46,20 +46,20 @@ The file needs to go to the storage/app directory once downloaded
 
 ### Legacy Note
 
-The only data returned on the legacy lookup would be the ISO Code
+The only data returned on the legacy lookup would be the isoCode, country name, and continent
 
 ```php
 array (
     "ip"           => "196.2.33.103",
     "isoCode"      => "ZA",
-    "country"      => "",
-    "city"         => "",
-    "state"        => "",
-    "postal_code"  => "",
-    "lat"          => "",
-    "lon"          => "",
-    "timezone"     => "",
-    "continent"    => "",
+    "country"      => "South Africa",
+    "city"         => null,
+    "state"        => null,
+    "postal_code"  => null,
+    "lat"          => null,
+    "lon"          => null,
+    "timezone"     => null,
+    "continent"    => "AF",
     "default"      => false
 );
 ```
