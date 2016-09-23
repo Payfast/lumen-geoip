@@ -178,17 +178,18 @@ class GeoIP {
             $countryCode = geoip_country_code_by_addr($this->_gi, $ip);
             geoip_close($this->_gi);
 
+            $countryNumber = $this->_gi->GEOIP_COUNTRY_CODE_TO_NUMBER[$countryCode];
             $location = array(
                 "ip" => $ip,
                 "isoCode" => $countryCode,
-                "country" => "",
+                "country" => $this->_gi->GEOIP_COUNTRY_NAMES[$countryNumber],
                 "city" => "",
                 "state" => "",
                 "postal_code" => "",
                 "lat" => "",
                 "lon" => "",
                 "timezone" => "",
-                "continent" => "",
+                "continent" => $this->_gi->GEOIP_CONTINENT_CODES[$countryNumber],
                 "default" => false,
             );
         }
