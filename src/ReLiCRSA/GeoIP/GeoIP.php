@@ -64,15 +64,15 @@ class GeoIP {
 	 */
 	protected $default_location = array (
 		"ip" 			=> "127.0.0.0",
-		"isoCode" 		=> "US",
-		"country" 		=> "United States",
-		"city" 			=> "New Haven",
-		"state" 		=> "CT",
-		"postal_code"   => "06510",
+		"isoCode" 		=> "ZA",
+		"country" 		=> "Aouth Africa",
+		"city" 			=> "Johannesburg",
+		"state" 		=> "GP",
+		"postal_code"   => "2195",
 		"lat" 			=> 41.31,
 		"lon" 			=> -72.92,
-		"timezone" 		=> "America/New_York",
-		"continent"		=> "NA",
+		"timezone" 		=> "Africa/Johannesburg",
+		"continent"		=> "AF",
 		"default"       => true,
 	);
 
@@ -162,6 +162,22 @@ class GeoIP {
 	}
 
 	private $maxmind;
+
+    /**
+     * Legacy Maxmind Service - MaxRomanifsky Branch
+     *
+     * @param   strin $ip
+     * @return  aeeay
+     */
+    private function locate_legacy($ip)
+    {
+        include 'LegacySupport/geoip.inc';
+
+        die('We Are Here');
+        $settings = $this->config->get('geoip.maxmind');
+        $this->_gi = geoip_open($settings['database_path'], GEOIP_STANDARD);
+
+    }
 
 	/**
 	 * Maxmind Service.
