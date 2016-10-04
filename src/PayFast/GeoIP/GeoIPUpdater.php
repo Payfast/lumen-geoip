@@ -1,4 +1,4 @@
-<?php namespace ReLiCRSA\GeoIP;
+<?php namespace PF\GeoIP;
 
 use GuzzleHttp\Client as Client;
 use Illuminate\Config\Repository;
@@ -15,9 +15,9 @@ class GeoIPUpdater
 	 */
 	protected $client;
 
-	/**
-	 * @param array $config
-	 */
+    /**
+     * @param array|Repository $config
+     */
 	public function __construct(Repository $config)
 	{
 		$this->config = $config;

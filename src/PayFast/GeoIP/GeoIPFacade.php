@@ -1,4 +1,4 @@
-<?php namespace ReLiCRSA\GeoIP;
+<?php namespace PF\GeoIP;
 
 use Illuminate\Support\Facades\Facade;
 

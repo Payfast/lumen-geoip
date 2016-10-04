@@ -1,8 +1,8 @@
-<?php namespace ReLiCRSA\GeoIP\Console;
+<?php namespace PF\GeoIP\Console;
 
 use Illuminate\Config\Repository;
 use Illuminate\Console\Command;
-use ReLiCRSA\GeoIP\GeoIPUpdater;
+use PF\GeoIP\GeoIPUpdater;
 
 class UpdateCommand extends Command
 {
@@ -21,7 +21,7 @@ class UpdateCommand extends Command
 	protected $description = 'Update geoip database files to the latest version';
 
 	/**
-	 * @var \ReLiCRSA\GeoIP\GeoIPUpdater
+	 * @var \PF\GeoIP\GeoIPUpdater
 	 */
 	protected $geoIPUpdater;
 

@@ -1,7 +1,7 @@
-<?php namespace ReLiCRSA\GeoIP;
+<?php namespace PF\GeoIP;
 
 use Illuminate\Support\ServiceProvider;
-use ReLiCRSA\GeoIP\Console\UpdateCommand;
+use PF\GeoIP\Console\UpdateCommand;
 
 class GeoIPServiceProvider extends ServiceProvider {
 

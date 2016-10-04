@@ -1,4 +1,4 @@
-<?php namespace ReLiCRSA\GeoIP;
+<?php namespace PF\GeoIP;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\WebService\Client;

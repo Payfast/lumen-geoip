@@ -6,7 +6,7 @@ Determine the geographical location of website visitors based on their IP addres
 
 ## Installation
 
-- [GeoIP for Lumen on GitHub](https://github.com/ReLiCRSA/lumen-geoip)
+- [GeoIP for Lumen on GitHub](https://github.com/PayFast/lumen-geoip)
 
 To get the latest version of GeoIP simply require it in your `composer.json` file.
 
@@ -19,7 +19,7 @@ You'll then need to run `composer update` to download it and have the autoloader
 Once GeoIP is installed you need to register the service provider with the application. Open up `bootstrap/app.php` and find the `Register Service Providers` section.
 
 ```php
-$app->register(ReLiCRSA\GeoIP\GeoIPServiceProvider::class);
+$app->register(PF\GeoIP\GeoIPServiceProvider::class);
 $app->configure('geoip');
 ```
 
@@ -76,7 +76,7 @@ $ php artisan geoip:update
 Get the location data for a website visitor:
 
 ```php
-use ReLiCRSA\GeoIP\GeoIPFacade;
+use PF\GeoIP\GeoIPFacade;
 
 $location = GeoIP::getLocation();
 ```
@@ -86,7 +86,7 @@ $location = GeoIP::getLocation();
 Getting the location data for a given IP:
 
 ```php
-use ReLiCRSA\GeoIP\GeoIPFacade;
+use PF\GeoIP\GeoIPFacade;
 
 $location = GeoIP::getLocation('232.223.11.11');
 ```
