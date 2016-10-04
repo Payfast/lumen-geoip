@@ -11,7 +11,7 @@ Determine the geographical location of website visitors based on their IP addres
 To get the latest version of GeoIP simply require it in your `composer.json` file.
 
 ~~~
-"relicrsa/lumen-geoip": "dev-master"
+"payfast/lumen-geoip": "dev-master"
 ~~~
 
 You'll then need to run `composer update` to download it and have the autoloader updated.
@@ -25,7 +25,7 @@ $app->configure('geoip');
 
 ### Configuration files
 
-Browse to `vendors/relicrsa/lumen-geoip/src/config`
+Browse to `vendors/payfast/lumen-geoip/src/config`
 
 Copy `geoip.php` to your `config` directory
 
