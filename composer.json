@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PF\\GeoIP\\": "src/PF/GeoIP"
+            "PF\\GeoIP\\": "src/PayFast/GeoIP"
         }
     },
     "extra": {
