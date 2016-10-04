@@ -1,5 +1,5 @@
 {
-    "name": "relicrsa/lumen-geoip",
+    "name": "payfast/lumen-geoip",
     "description": "Supports the two main GeoIP services (infoDB and Maxmind).",
     "keywords": ["lumen", "lumen 5", "geoip", "location", "geolocation"],
     "license": "BSD 2-Clause",
@@ -24,12 +24,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ReLiCRSA\\GeoIP\\": "src/ReLiCRSA/GeoIP"
+            "PF\\GeoIP\\": "src/PF/GeoIP"
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "master"
+            "dev-master": "dev-master",
+            "master": "master"
         }
     }
 }
