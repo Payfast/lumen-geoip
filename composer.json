@@ -26,4 +26,10 @@
         "psr-4": {
             "PF\\GeoIP\\": "src/PayFast/GeoIP"
         }
-    }}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-master"
+        }
+    }
+}
