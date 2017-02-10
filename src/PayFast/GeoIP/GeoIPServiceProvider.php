@@ -32,7 +32,7 @@ class GeoIPServiceProvider extends ServiceProvider {
 		// Register providers.
 		$this->app['geoip'] = $this->app->share(function($app)
 		{
-			return new GeoIP($app['config'], $app["session.store"]);
+			return new GeoIP($app['config']);
 		});
 
 		$this->app['command.geoip.update'] = $this->app->share(function ($app)

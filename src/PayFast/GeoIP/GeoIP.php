@@ -82,10 +82,9 @@ class GeoIP {
 	 * @param  \Illuminate\Config\Repository  $config
 	 * @param  \Illuminate\Session\Store      $session
 	 */
-	public function __construct(Repository $config, SessionStore $session)
+	public function __construct(Repository $config)
 	{
 		$this->config  = $config;
-		$this->session = $session;
 
 		// Set custom default location
 		$this->default_location = array_merge(
@@ -104,7 +103,7 @@ class GeoIP {
 	 */
 	function saveLocation()
 	{
-		$this->session->set('geoip-location', $this->location);
+		$_SESSION['geoip-location'] = $this->location;
 	}
 
 	/**
@@ -136,7 +135,7 @@ class GeoIP {
 	private function find($ip = null)
 	{
 		// Check Session
-		if ($ip === null && $position = $this->session->get('geoip-location')) {
+		if ($ip === null && $position = $_SESSION['geoip-location']) {
 			return $position;
 		}
 
