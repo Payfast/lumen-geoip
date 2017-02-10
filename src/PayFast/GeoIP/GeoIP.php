@@ -12,14 +12,6 @@ use Illuminate\Config\Repository;
 use Illuminate\Session\Store as SessionStore;
 
 class GeoIP {
-
-	/**
-	 * The session store.
-	 *
-	 * @var \Illuminate\Session\Store
-	 */
-	protected $session;
-
 	/**
 	 * Illuminate config repository instance.
 	 *
@@ -97,16 +89,6 @@ class GeoIP {
 	}
 
 	/**
-	 * Save location data in the session.
-	 *
-	 * @return void
-	 */
-	function saveLocation()
-	{
-		$_SESSION['geoip-location'] = $this->location;
-	}
-
-	/**
 	 * Get location from IP.
 	 *
 	 * @param  string $ip Optional
@@ -135,7 +117,7 @@ class GeoIP {
 	private function find($ip = null)
 	{
 		// Check Session
-		if ($ip === null && $position = $_SESSION['geoip-location']) {
+		if ($ip === null && $position = $this->location) {
 			return $position;
 		}
 
