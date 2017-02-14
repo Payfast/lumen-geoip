@@ -1,15 +1,11 @@
 <?php namespace PF\GeoIP;
 
+use Monolog\Logger;
 use GeoIp2\Database\Reader;
 use GeoIp2\WebService\Client;
-
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
-
-use GeoIp2\Exception\AddressNotFoundException;
-
 use Illuminate\Config\Repository;
-use Illuminate\Session\Store as SessionStore;
+use Monolog\Handler\StreamHandler;
+use GeoIp2\Exception\AddressNotFoundException;
 
 class GeoIP {
 	/**
