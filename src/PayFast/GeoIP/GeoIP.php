@@ -95,11 +95,6 @@ class GeoIP {
 		// Get location data
 		$this->location = $this->find($ip);
 
-		// Save user's location
-		if ($ip === null) {
-			$this->saveLocation();
-		}
-
 		return $this->location;
 	}
 
