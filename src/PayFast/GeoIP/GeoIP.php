@@ -144,7 +144,7 @@ class GeoIP {
     private function locate_legacy($ip)
     {
         try {
-            include 'LegacySupport/geoip.inc';
+            require_once 'LegacySupport/geoip.inc';
             $settings = $this->config->get('geoip.legacy');
             $this->_gi = geoip_open($settings['database_path'], GEOIP_STANDARD);
             $countryCode = geoip_country_code_by_addr($this->_gi, $ip);
